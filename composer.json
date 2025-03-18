@@ -1,0 +1,36 @@
+{
+  "name": "colin-dorr/craftcms-better-updates",
+  "description": "This Craft CMS plugin helps keep track of updates and license statuses.",
+  "type": "craft-plugin",
+  "keywords": ["craft", "craft cms", "updates", "tracking", "mailing", "mail"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Colin Dorr",
+      "homepage": "https://github.com/ColinDorr"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ColinDorr/craftcms-better-updates/issues?state=open",
+    "source": "https://github.com/ColinDorr/craftcms-better-updates",
+    "docs": "https://github.com/ColinDorr/craftcms-better-updates/blob/main/README.md"
+  },
+  "require": {
+    "craftcms/cms": "^3.0 < 4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ColinDorr\\CraftcmsBetterUpdates\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "CraftCMS Better Updates",
+    "handle": "craftcms-better-updates"
+  },
+  "config": {
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
+}

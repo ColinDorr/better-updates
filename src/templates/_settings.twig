@@ -1,0 +1,86 @@
+{% set plugin_handle = "craftcms-better-updates" %}
+{% if settings is not defined %}
+    {% set settings = craft.app.plugins.getPlugin(plugin_handle).settings %}
+{% endif %}
+
+{% if settings is not defined %}
+    <p>{{ "No settings found" }}</p>
+{% else %}
+    <div class="plugin-settings">
+       <form method="post" accept-charset="UTF-8">
+
+            {{ redirectInput(plugin_handle) }}
+            {{ csrfInput() }}
+
+            <input type="hidden" name="action" value="{{ plugin_handle }}/settings/save">
+            <input type="hidden" name="next_planned_email_timestamp" value="{{ settings['next_planned_email_timestamp'] }}">
+
+            <div class="field{% if settings.getErrors('email') %} error{% endif %}">
+                <label for="email">{{ "Email Address"|t(plugin_handle) }}</label>
+                <p class="instructions">{{ ("This email will be used to send update notification emails."|t(plugin_handle))|raw }}</p>
+                <input type="email" id="email" name="email" value="{{ settings['email'] }}" required>
+                {% if settings.getErrors('email') %}
+                    <ul class="errors">
+                        {% for error in settings.getErrors('email') %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="field">
+                <label for="version_type">{{ "Minimum Version Update to Track"|t(plugin_handle) }}</label>
+                <p class="instructions">{{ ("Select the minimum update type you want to track."|t(plugin_handle))|raw }}</p>
+                <select id="version_type" name="version_type" required>
+                    <option value="Major" {% if settings['version_type'] == 'Major' %}selected{% endif %}>{{ "Major"|t(plugin_handle) }}</option>
+                    <option value="Minor" {% if settings['version_type'] == 'Minor' %}selected{% endif %}>{{ "Minor"|t(plugin_handle) }}</option>
+                    <option value="Patch" {% if settings['version_type'] == 'Patch' %}selected{% endif %}>{{ "Patch"|t(plugin_handle) }}</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="day_of_week">{{ "Notification Day"|t(plugin_handle) }}</label>
+                <p class="instructions">{{ ("Choose which day you would like to receive update reports."|t(plugin_handle))|raw }}</p>
+                <select 
+                    id="day_of_week" 
+                    name="day_of_week" 
+                    required
+                >
+                    {% for day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] %}
+                        <option value="{{ day }}" {% if settings['day_of_week'] == day %}selected{% endif %}>{{ day|t(plugin_handle) }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="frequency">{{ "Notification Frequency"|t(plugin_handle) }}</label>
+                <p class="instructions">{{ ("Select how often you want to receive notifications."|t(plugin_handle))|raw }}</p>
+                <select 
+                    id="frequency" 
+                    name="frequency" 
+                    required
+                    {% if settings['update_is_critical'] == true %}
+                        disabled
+                    {% endif %}
+                >
+                    {% for freq in ['Daily', 'Weekly', 'Bi-weekly', 'Monthly'] %}
+                        {% set isSelected = settings['frequency'] == freq %}
+                        <option 
+                            value="{{ freq }}"
+                            {% if isSelected %}selected{% endif %}
+                        >{{ freq|t(plugin_handle) }}</option>
+                    {% endfor %}
+                </select>
+                {% if settings['update_is_critical'] == true and settings['frequency'] != "Daily" %}
+                    <p class="errors">{{ ("There is a critical update available. A weekly reminder will be sent until issue is fixed."|t(plugin_handle))|raw }}</p>
+                {% elseif settings['update_is_critical'] == true %}
+                    <p class="errors">{{ ("There is a critical update available."|t(plugin_handle))|raw }}</p>
+                {% endif %}
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="btn submit save-button">{{ "Save Settings"|t(plugin_handle) }}</button>
+            </div>
+        </form>
+    </div>
+{% endif %}

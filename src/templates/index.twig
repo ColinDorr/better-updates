@@ -1,0 +1,14 @@
+{% extends "_layouts/cp.html" %}
+{% set plugin_handle = "craftcms-better-updates" %}
+{% set title = "Better updates"|t('plugin-handle') %}
+
+{% set crumbs = [
+  {
+    label: 'Better Updates'|t(plugin_handle),
+    url: url(plugin_handle),
+  },
+] %}
+
+{% block content %}
+  {% include plugin_handle ~ "/_settings.twig" %}
+{% endblock %}
