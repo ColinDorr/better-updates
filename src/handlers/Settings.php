@@ -1,15 +1,15 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\handlers;
+namespace ColinDorr\BetterUpdates\handlers;
 
 use Craft;
 use craft\helpers\App;
 use craft\web\Application;
 use Symfony\Component\Yaml\Yaml;
 
-use ColinDorr\CraftcmsBetterUpdates\Plugin;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Updates;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Validations;
+use ColinDorr\BetterUpdates\Plugin;
+use ColinDorr\BetterUpdates\handlers\Updates;
+use ColinDorr\BetterUpdates\handlers\Validations;
 
 class Settings
 {

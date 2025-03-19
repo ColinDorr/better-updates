@@ -1,5 +1,5 @@
 {
-  "name": "colin-dorr/craftcms-better-updates",
+  "name": "colin-dorr/better-updates",
   "description": "This Craft CMS plugin helps keep track of updates and license statuses.",
   "type": "craft-plugin",
   "keywords": ["craft", "craft cms", "updates", "tracking", "mailing", "mail"],
@@ -11,21 +11,21 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/ColinDorr/craftcms-better-updates/issues?state=open",
-    "source": "https://github.com/ColinDorr/craftcms-better-updates",
-    "docs": "https://github.com/ColinDorr/craftcms-better-updates/blob/main/README.md"
+    "issues": "https://github.com/ColinDorr/better-updates/issues?state=open",
+    "source": "https://github.com/ColinDorr/better-updates",
+    "docs": "https://github.com/ColinDorr/better-updates/blob/main/README.md"
   },
   "require": {
     "craftcms/cms": "^3.0 < 4.0"
   },
   "autoload": {
     "psr-4": {
-      "ColinDorr\\CraftcmsBetterUpdates\\": "src/"
+      "ColinDorr\\BetterUpdates\\": "src/"
     }
   },
   "extra": {
-    "name": "CraftCMS Better Updates",
-    "handle": "craftcms-better-updates"
+    "name": "Better Updates",
+    "handle": "better-updates"
   },
   "config": {
     "allow-plugins": {

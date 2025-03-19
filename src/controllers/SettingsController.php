@@ -1,12 +1,12 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\controllers;
+namespace ColinDorr\BetterUpdates\controllers;
 
 use Craft;
 use craft\web\Controller;
 use yii\web\Response;
 use craft\helpers\UrlHelper;
-use ColinDorr\CraftcmsBetterUpdates\Plugin;
+use ColinDorr\BetterUpdates\Plugin;
 
 class SettingsController extends Controller
 {

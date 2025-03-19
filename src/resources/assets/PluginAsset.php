@@ -1,6 +1,6 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\resources\assets;
+namespace ColinDorr\BetterUpdates\resources\assets;
 
 use craft\web\AssetBundle;
 use craft\web\assets\cp\CpAsset;

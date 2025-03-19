@@ -1,16 +1,16 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\controllers;
+namespace ColinDorr\BetterUpdates\controllers;
 
 use Craft;
 use yii\console\Controller;
 use yii\console\ExitCode;
 
-use ColinDorr\CraftcmsBetterUpdates\handlers\Updates;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Mailing;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Validations;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Settings;
-use ColinDorr\CraftcmsBetterUpdates\handlers\HandleUpdateValidations;
+use ColinDorr\BetterUpdates\handlers\Updates;
+use ColinDorr\BetterUpdates\handlers\Mailing;
+use ColinDorr\BetterUpdates\handlers\Validations;
+use ColinDorr\BetterUpdates\handlers\Settings;
+use ColinDorr\BetterUpdates\handlers\HandleUpdateValidations;
 
 class ConsoleController extends Controller
 {
@@ -35,8 +35,8 @@ class ConsoleController extends Controller
      * Run Plugin and check for CMS and Plugin updates and status
      *
      * Usage:
-     * - `php craft craftcms-better-updates/check` // Check variables against plugin settings and return list with CMS Plugin updates / statuses if validations pass.
-     * - `php craft craftcms-better-updates/check --force` // force approve plugin settings check and list with CMS Plugin updates / statuses if validations pass.
+     * - `php craft better-updates/check` // Check variables against plugin settings and return list with CMS Plugin updates / statuses if validations pass.
+     * - `php craft better-updates/check --force` // force approve plugin settings check and list with CMS Plugin updates / statuses if validations pass.
      *
      * @return int Exit code
      */
@@ -88,7 +88,7 @@ class ConsoleController extends Controller
      * Send a test notification email from the console.
      *
      * Usage:
-     * - `php craft craftcms-better-updates/test-notify`
+     * - `php craft better-updates/test-notify`
      *
      * @return array Status of the email notification.
      */
@@ -103,7 +103,7 @@ class ConsoleController extends Controller
      * Run a test of the update validation logic.
      *
      * Usage:
-     * - `php craft craftcms-better-updates/test-validation`
+     * - `php craft better-updates/test-validation`
      *
      * @return array Validation status and update levels.
      */

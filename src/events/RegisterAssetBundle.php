@@ -1,11 +1,11 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\events;
+namespace ColinDorr\BetterUpdates\events;
 
 use Craft;
 use craft\web\View;
 use yii\base\Event;
-use ColinDorr\CraftcmsBetterUpdates\resources\assets\PluginAsset;
+use ColinDorr\BetterUpdates\resources\assets\PluginAsset;
 
 class RegisterAssetBundle
 {

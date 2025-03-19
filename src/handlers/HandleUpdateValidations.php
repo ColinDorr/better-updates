@@ -1,15 +1,15 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\handlers;
+namespace ColinDorr\BetterUpdates\handlers;
 
 use Craft;
 use craft\web\Application;
 
-use ColinDorr\CraftcmsBetterUpdates\handlers\Updates;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Settings;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Notifications;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Validations;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Mailing;
+use ColinDorr\BetterUpdates\handlers\Updates;
+use ColinDorr\BetterUpdates\handlers\Settings;
+use ColinDorr\BetterUpdates\handlers\Notifications;
+use ColinDorr\BetterUpdates\handlers\Validations;
+use ColinDorr\BetterUpdates\handlers\Mailing;
 
 class HandleUpdateValidations
 {

@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace ColinDorr\CraftcmsBetterUpdates;
+namespace ColinDorr\BetterUpdates;
 
 use Craft;
 use craft\base\Plugin as PluginBase;
 use craft\base\Model;
-use ColinDorr\CraftcmsBetterUpdates\models\Settings;
-use ColinDorr\CraftcmsBetterUpdates\events\RegisterAssetBundle;
-use ColinDorr\CraftcmsBetterUpdates\events\RegisterUpdateValidations;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Notifications;
+use ColinDorr\BetterUpdates\models\Settings;
+use ColinDorr\BetterUpdates\events\RegisterAssetBundle;
+use ColinDorr\BetterUpdates\events\RegisterUpdateValidations;
+use ColinDorr\BetterUpdates\handlers\Notifications;
 
 class Plugin extends PluginBase
 {
-    public static $plugin_handle = 'craftcms-better-updates';
+    public static $plugin_handle = 'better-updates';
     public $schemaVersion = '1.0.0';
     public $hasCpSettings = true;
     public $hasCpSection = true;
@@ -57,7 +57,7 @@ class Plugin extends PluginBase
     protected function settingsHtml(): ?string
     {
         return Craft::$app->getView()->renderTemplate(
-            'craftcms-better-updates/_settings.twig',
+            'better-updates/_settings.twig',
             [
                 'settings' => $this->getSettings()
             ]

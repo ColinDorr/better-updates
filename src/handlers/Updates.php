@@ -1,6 +1,6 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\Handlers;
+namespace ColinDorr\BetterUpdates\Handlers;
 
 use Craft;
 use craft\helpers\App;

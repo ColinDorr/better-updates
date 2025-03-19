@@ -1,13 +1,13 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\handlers;
+namespace ColinDorr\BetterUpdates\handlers;
 
 use Craft;
 use DateTime;
 use DateInterval;
 
-use ColinDorr\CraftcmsBetterUpdates\handlers\Settings;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Updates;
+use ColinDorr\BetterUpdates\handlers\Settings;
+use ColinDorr\BetterUpdates\handlers\Updates;
 
 
 class Validations

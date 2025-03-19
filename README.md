@@ -22,11 +22,11 @@
 ### Via Composer
 1. **Install the plugin**:
     ```bash
-    composer require colin-dorr/craftcms-better-updates
+    composer require colin-dorr/better-updates
     ```
 2. **Enable the plugin**:
     ```bash
-    php craft plugin/install craftcms-better-updates
+    php craft plugin/install better-updates
     ```
 
 ---
@@ -44,35 +44,35 @@ Configure your plugin settings in the **Craft CMS Control Panel** under **Settin
 ### Run Update Check
 Check for updates and display available updates:
 ```bash
-php craft craftcms-better-updates/check
+php craft better-updates/check
 ```
 
 ### Force Update Check
 Force an update check, bypassing validation:
 ```bash
-php craft craftcms-better-updates/check --force
+php craft better-updates/check --force
 ```
 
 ### Send Test Notification
 Send a test email notification:
 ```bash
-php craft craftcms-better-updates/test-notify
+php craft better-updates/test-notify
 ```
 
 ### Validate Update Settings
 Validate current update settings and view validation status:
 ```bash
-php craft craftcms-better-updates/test-validation
+php craft better-updates/test-validation
 ```
 
 ---
 
 ## 📚 Documentation
-For more detailed documentation, visit the [GitHub repository](https://github.com/ColinDorr/craftcms-better-updates).
+For more detailed documentation, visit the [GitHub repository](https://github.com/ColinDorr/better-updates).
 
 ## 🐞 Support
-- [Report Issues](https://github.com/ColinDorr/craftcms-better-updates/issues?state=open)
-- [Source Code](https://github.com/ColinDorr/craftcms-better-updates)
+- [Report Issues](https://github.com/ColinDorr/better-updates/issues?state=open)
+- [Source Code](https://github.com/ColinDorr/better-updates)
 
 ---
 

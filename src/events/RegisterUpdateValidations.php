@@ -1,11 +1,11 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\events;
+namespace ColinDorr\BetterUpdates\events;
 
 use Craft;
 use craft\web\Application;
-use ColinDorr\CraftcmsBetterUpdates\Plugin;
-use ColinDorr\CraftcmsBetterUpdates\handlers\HandleUpdateValidations;
+use ColinDorr\BetterUpdates\Plugin;
+use ColinDorr\BetterUpdates\handlers\HandleUpdateValidations;
 
 class RegisterUpdateValidations
 {
@@ -13,7 +13,7 @@ class RegisterUpdateValidations
     {    
         if (Craft::$app->request->getIsConsoleRequest()) {
             Craft::$app->controllerMap[Plugin::$plugin_handle] = [
-                'class' => \ColinDorr\CraftcmsBetterUpdates\controllers\ConsoleController::class,
+                'class' => \ColinDorr\BetterUpdates\controllers\ConsoleController::class,
             ];
         }
         else {

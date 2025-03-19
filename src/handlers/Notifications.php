@@ -1,10 +1,10 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\handlers;
+namespace ColinDorr\BetterUpdates\handlers;
 
 use Craft;
 use yii\console\ExitCode;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Validations;
+use ColinDorr\BetterUpdates\handlers\Validations;
 
 class Notifications
 {

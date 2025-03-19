@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace ColinDorr\CraftcmsBetterUpdates\models;
+namespace ColinDorr\BetterUpdates\models;
 
 use craft\base\Model;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Settings as SettingsHandler;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Updates;
+use ColinDorr\BetterUpdates\handlers\Settings as SettingsHandler;
+use ColinDorr\BetterUpdates\handlers\Updates;
 
 class Settings extends Model
 {

@@ -1,19 +1,19 @@
 <?php
 
-namespace ColinDorr\CraftcmsBetterUpdates\handlers;
+namespace ColinDorr\BetterUpdates\handlers;
 
 use Craft;
 use craft\helpers\App;
 use craft\helpers\UrlHelper;
 use Symfony\Component\Yaml\Yaml;
 
-use ColinDorr\CraftcmsBetterUpdates\handlers\Settings;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Updates;
-use ColinDorr\CraftcmsBetterUpdates\handlers\Notifications;
+use ColinDorr\BetterUpdates\handlers\Settings;
+use ColinDorr\BetterUpdates\handlers\Updates;
+use ColinDorr\BetterUpdates\handlers\Notifications;
 
 class Mailing
 {
-    public static string $PluginName = "CraftCMS Better Updates";
+    public static string $PluginName = "Better Updates";
     
     public static function SendMail( string $emailTemplate = null ): array
     {
