@@ -15,7 +15,7 @@ use ColinDorr\BetterUpdates\handlers\Notifications;
 class Plugin extends PluginBase
 {
     public static $plugin_handle = 'better-updates';
-    public string $schemaVersion = '2.0.0';
+    public string $schemaVersion = '3.0.0';
     public bool $hasCpSettings = true;
     public bool $hasCpSection = true;
 
