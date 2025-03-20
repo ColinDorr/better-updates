@@ -8,12 +8,12 @@
 - Track updates for Craft CMS and installed plugins.
 - Send email notifications for available updates.
 - Configurable notification frequency (daily, weekly, monthly).
-- Supports Craft CMS 4
+- Supports Craft CMS 5
 
 ---
 
 ## 📋 Requirements
-- **Craft CMS**: "^4.0 < 5.0"
+- **Craft CMS**: "^5.0 < 6.0"
 
 ---
 
