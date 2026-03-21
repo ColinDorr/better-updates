@@ -10,7 +10,7 @@ use ColinDorr\BetterUpdates\Plugin;
 
 class SettingsController extends Controller
 {
-    protected $allowAnonymous = false;
+    protected array|int|bool $allowAnonymous = false;
 
     public function actionSave(): ?Response
     {
