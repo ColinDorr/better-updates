@@ -50,7 +50,7 @@ class Plugin extends PluginBase
         return [
             'label' => 'Better Updates',
             'url' => self::$plugin_handle,
-            'icon' => Craft::getAlias('@' . self::$plugin_handle . '/Resources/assets/icon-cp.svg')
+            'icon' => Craft::getAlias('@' . self::$plugin_handle . '/resources/assets/icon-cp.svg')
         ];
     }
 
